@@ -7,10 +7,7 @@ License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://koti.mbnet.fi/makegho/c/bchase/%{name}-%{version}.tar.bz2
 URL:		http://koti.mbnet.fi/makegho/c/bchase/
-BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	SDL_image-devel >= 1.2.0
-Requires:	SDL >= 1.2.0
-Requires:	SDL_image >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -47,7 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc VERSION README COPYING
+%doc VERSION README
 %attr(755,root,root) %{_bindir}/%{name}
 %dir %{_datadir}/%{name}
 # hey, isn't it arch-dependent binary??? if so, it cannot be in %{_datadir}!

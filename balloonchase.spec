@@ -10,7 +10,6 @@ URL:		http://koti.mbnet.fi/makegho/c/bchase/
 BuildRequires:	SDL_image-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 Balloon Chase is a game where you fly a hot air balloon and try to

@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://koti.mbnet.fi/makegho/c/bchase/%{name}-%{version}.tar.bz2
+# Source0-md5:	ed386a8e30f90ad13dd404f219e4332b
 URL:		http://koti.mbnet.fi/makegho/c/bchase/
 BuildRequires:	SDL_image-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

@@ -1,4 +1,4 @@
-Summary: 	Balloon Chase game
+Summary:	Balloon Chase game
 Summary(pl):	Gra Balloon Chase
 Name:		balloonchase
 Version:	0.9.6

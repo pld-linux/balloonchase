@@ -30,11 +30,11 @@ powietrzem, próbuj±c wypchn±æ drugiego gracza z ekranu.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/images}
 
-cp %{name} $RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp %{name}.dat $RPM_BUILD_ROOT/%{_datadir}/%{name}
-cp images/* $RPM_BUILD_ROOT/%{_datadir}/%{name}/images
+cp %{name} $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp %{name}.dat $RPM_BUILD_ROOT%{_datadir}/%{name}
+cp images/* $RPM_BUILD_ROOT%{_datadir}/%{name}/images
 
-cat > $RPM_BUILD_ROOT/%{_bindir}/%{name} <<EOF
+cat > $RPM_BUILD_ROOT%{_bindir}/%{name} <<EOF
 #!/bin/sh
 cd %{_datadir}/%{name}
 ./%{name} \$@

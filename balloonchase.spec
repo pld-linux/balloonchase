@@ -1,7 +1,7 @@
 Summary: 	Balloon Chase game
 Summary(pl):	Gra Balloon Chase
 Name:		balloonchase
-Version:	0.9.2
+Version:	0.9.6
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
@@ -20,7 +20,7 @@ Balloon Chase to gra, w której lata siê balonem wype³nionym ciep³ym
 powietrzem, próbuj±c wypchn±æ drugiego gracza z ekranu.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
 %{__make}
@@ -29,7 +29,8 @@ powietrzem, próbuj±c wypchn±æ drugiego gracza z ekranu.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/images}
 
-cp main $RPM_BUILD_ROOT/%{_datadir}/%{name}/%{name}
+cp %{name} $RPM_BUILD_ROOT/%{_datadir}/%{name}
+cp %{name}.dat $RPM_BUILD_ROOT/%{_datadir}/%{name}
 cp images/* $RPM_BUILD_ROOT/%{_datadir}/%{name}/images
 
 cat > $RPM_BUILD_ROOT/%{_bindir}/%{name} <<EOF
@@ -48,5 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/%{name}
 # hey, isn't it arch-dependent binary??? if so, it cannot be in %{_datadir}!
 %attr(755,root,root) %{_datadir}/%{name}/%{name}
+%{_datadir}/%{name}/%{name}.dat
 %dir %{_datadir}/%{name}/images
 %{_datadir}/%{name}/images/*

@@ -8,6 +8,7 @@ Group:		X11/Applications/Games
 Source0:	http://koti.mbnet.fi/makegho/c/bchase/%{name}-%{version}.tar.bz2
 # Source0-md5:	ed386a8e30f90ad13dd404f219e4332b
 URL:		http://koti.mbnet.fi/makegho/c/bchase/
+Patch0:		%{name}-Makefile.patch
 BuildRequires:	SDL_image-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,9 +23,12 @@ powietrzem, próbuj±c wypchn±æ drugiego gracza z ekranu.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-%{__make}
+%{__make} \
+	CXX="%{__cxx}" \
+	CFLAGS="%{rpmcxxflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT

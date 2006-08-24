@@ -1,0 +1,13 @@
+--- balloonchase-0.9.6.orig/Makefile	2006-08-24 23:13:26.000000000 +0200
++++ balloonchase-0.9.6/Makefile	2006-08-24 23:15:45.000000000 +0200
+@@ -9,8 +9,8 @@
+ clean:
+ 	rm balloonchase src/*.o
+ main: 	src/main.c
+-	g++ -c -o src/main.o `sdl-config --cflags` src/main.c
+-	g++ -o balloonchase src/main.o `sdl-config --libs`
++	$(CXX) $(CFLAGS) -c -o src/main.o `sdl-config --cflags` src/main.c
++	$(CXX) $(CFLAGS) -o balloonchase src/main.o `sdl-config --libs`
+ pkg:
+ 	@echo $(PKG_BCVERSION) >VERSION
+ 	rm balloonchase src/*.o

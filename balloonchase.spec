@@ -1,5 +1,5 @@
 Summary:	Balloon Chase game
-Summary(pl):	Gra Balloon Chase
+Summary(pl.UTF-8):   Gra Balloon Chase
 Name:		balloonchase
 Version:	0.9.6
 Release:	1
@@ -17,9 +17,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Balloon Chase is a game where you fly a hot air balloon and try to
 blow the other player out of the screen.
 
-%description -l pl
-Balloon Chase to gra, w której lata siê balonem wype³nionym ciep³ym
-powietrzem, próbuj±c wypchn±æ drugiego gracza z ekranu.
+%description -l pl.UTF-8
+Balloon Chase to gra, w ktÃ³rej lata siÄ™ balonem wypeÅ‚nionym ciepÅ‚ym
+powietrzem, prÃ³bujÄ…c wypchnÄ…Ä‡ drugiego gracza z ekranu.
 
 %prep
 %setup -q
